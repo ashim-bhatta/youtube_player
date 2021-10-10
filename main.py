@@ -54,12 +54,12 @@ def play_video(videoId, isVideo):
     #     url = f"mpv https://www.youtube.com/watch?v={videoId}"
     # subprocess.call(url, shell=True)
     if sys.platform.startswith('linux'):
-            cmd = []
-            cmd.append("mpv")
-            if not isVideo:
-                cmd.append(' --no-video')
-            cmd.append(f"https://www.youtube.com/watch?v={videoId}")
-            subprocess.call(cmd)
+        cmd = []
+        cmd.append("mpv")
+        if not isVideo:
+            cmd.append(' --no-video')
+        cmd.append(f"https://www.youtube.com/watch?v={videoId}")
+        subprocess.call(cmd)
 
     elif sys.platform.startswith('win32'):
         cmd = ""
